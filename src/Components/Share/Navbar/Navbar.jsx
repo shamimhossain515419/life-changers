@@ -1,19 +1,20 @@
 
-
+"use client"
 import { AiOutlineHeart, AiOutlineShoppingCart } from 'react-icons/ai'
 import { FaBars } from "react-icons/fa"
 import { useState } from "react";
-import Container from "../../Components/Container/Container";
+;
 import Menubar from './Menubar';
 import Link from 'next/link';
 import Image from 'next/image';
 import Notification from '@/Components/Notification/Notification';
+import Container from '@/Components/Contianer/Container';
 
 
 
 
 const Navbar = () => {
-     const { user, } = null;
+     const user = null;
      const [Open, setOpen] = useState(true)
    return (
           <div>
@@ -27,7 +28,7 @@ const Navbar = () => {
                                           */}
 
 
-                                        <Link href={'/'}>  <Image width={60} height={60} className=" h-12 w-12 md:hidden rounded-full object-cover" src={user?.photoURL ? user?.photoURL : "user?.photoURL"} alt="img" /></Link>
+                                        <Link href={'/'}>  <Image width={60} height={60} className=" h-12 w-12 md:hidden rounded-full object-cover" src={user?.photoURL ? user?.photoURL : "https://i.ibb.co/SNwtsLW/download.jpg"} alt="img" /></Link>
                                         <Link href="/"> <h1 className='  py-2 font-semibold  text-base md:text-2xl text-color   uppercase'> Life changers </h1></Link>
                                    </div>
                                    <div className=' hidden md:flex items-center gap-3  space-x-5'>

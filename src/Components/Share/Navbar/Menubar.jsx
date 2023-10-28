@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-
+import Image from "next/image";
+import Link from "next/link";
 
 const Menubar = () => {
      return (
@@ -7,17 +7,17 @@ const Menubar = () => {
                <div>
                     <hr />
                     <div className=' space-y-3 flex   flex-col '>
-                         <Link to={'/'}> Home</Link>
-                         <Link to={'/alljewelry'}> All jewelry</Link>
-                         <Link to={'/myjewelry'}>My Jewelry</Link>
-                         <Link to={'/addjewelry'}> Add jewelry</Link>
-                         <Link to={'/blogs'}> Blogs</Link>
-                         <Link to={'/contact'}> Contact Us</Link>
+                         <Link  href={'/'}> Home</Link>
+                         <Link  href={'/alljewelry'}> All jewelry</Link>
+                         <Link  href={'/myjewelry'}>My Jewelry</Link>
+                         <Link  href={'/addjewelry'}> Add jewelry</Link>
+                         <Link  href={'/blogs'}> Blogs</Link>
+                         <Link  href={'/contact'}> Contact Us</Link>
 
 
 
                          <div className="  flex items-center gap-1">
-                              <image className=" h-12 w-12 rounded-full object-cover" src={""} alt="" />
+                              <Image width={10} height={10} className=" h-12 w-12 rounded-full object-cover" src={""} alt="" />
                               <p> {"shamim hossain"} </p>
                          </div>
                     </div>
