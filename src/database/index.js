@@ -5,7 +5,7 @@ const configOptions = {
 };
 
 const connectToDB = async () => {
-  const connectionUrl =  `mongodb+srv://${process.env.VITE_USER}:${process.env.VITE_PASSWORD}@cluster0.37cje8r.mongodb.net/`;
+  const connectionUrl =  `mongodb+srv://lifeChangers:JObZ8digbWxVNTQg@cluster0.37cje8r.mongodb.net/`;
  mongoose
     .connect(connectionUrl, configOptions)
     .then(() => console.log("Leading  database connected successfully!"))
