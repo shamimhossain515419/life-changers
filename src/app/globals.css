@@ -2,3 +2,167 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+     font-family: "Jost", sans-serif;
+}
+
+.primary {
+     color: #1a4bde;
+}
+
+.primaryBg {
+     background-color: #0d6efd;
+}
+
+.secondaryBg {
+     background-color: #055C2D;
+}
+
+.secondary {
+     color: #055C2D;
+}
+
+.third {
+     color: #4054B2;
+}
+
+.thirdBg {
+     background-color: #4054B2;
+}
+
+.textColor {
+     color: #0A1023;
+}
+
+.shadow {
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.main-slider .image-layer {
+     @apply bg-no-repeat bg-cover bg-center transition-transform duration-[5000ms] ease-in-out min-h-[700px];
+}
+
+.main-slider .swiper-slide-active .image-layer {
+     @apply scale-150 z-10;
+}
+
+.main-slider .image-layer::before {
+     @apply absolute top-0 left-0 bottom-0 right-0 content-[''] bg-[#1c0c0664] dark:bg-[#1c0c0690] z-0;
+}
+
+.main-slider .swiper-button-next,
+.main-slider .swiper-button-prev {
+     @apply absolute bg-white text-black w-12 h-12 rounded-full hidden sm:flex items-center justify-center;
+}
+
+[data-theme="dark"] .main-slider .swiper-button-next,
+[data-theme="dark"] .main-slider .swiper-button-prev {
+     @apply bg-[#2a303c] text-[#e2e2e2];
+}
+
+.main-slider .swiper-button-next::after,
+.main-slider .swiper-button-prev::after {
+     @apply text-2xl;
+}
+
+.main-slider .main-slider__details {
+     @apply invisible;
+}
+
+.main-slider .swiper-slide-active .main-slider__details {
+     @apply visible animate-[animate-slide_800ms_ease-in-out];
+     animation: animate-slide 800ms ease-in-out;
+}
+
+.nav-bg-color {
+     background: white;
+     color: black;
+}
+
+.background {
+     background-image: url("https://hospitalmanagementsystem.org/images/best-practice-management-system.jpg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     width: 100%;
+     height: auto;
+}
+
+.show {
+     opacity: 1;
+}
+
+@keyframes animate-slide {
+     0% {
+          opacity: 0;
+     }
+
+     100% {
+          opacity: 1;
+     }
+}
+
+@media screen and (max-width: 740px) {
+
+     /* .table {
+       margin-left: 7rem;
+     } */
+     .table thead {
+          display: none;
+     }
+
+     .table,
+     .table tbody,
+     .table tr,
+     .table td {
+          display: block !important;
+     }
+
+     td {
+          text-align: right;
+          border: 1px solid black;
+     }
+
+     .table tr {
+          margin-bottom: 2rem;
+     }
+
+     .table td::before {
+          content: attr(data-label);
+          position: absolute;
+          left: 0;
+          font-weight: bold;
+          padding-left: 10px;
+     }
+}
+
+
+
+.btn-gradient {
+     background-image: linear-gradient(to right, rgb(1 134 218), rgb(182 49 167));
+     border: 0;
+     color: rgba(var(--text-color));
+}
+
+.btn-glow:hover {
+     box-shadow: rgba(var(--primary-color), 0.5) 0px 0px 20px 0px;
+}
+
+.btn {
+     font-family: 'DM Sans', sans-serif;
+     font-size: 22px;
+     padding: 6px 22px;
+     color: white;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     border-radius: 30px;
+}
+
+.btn-gradient-border {
+     color: rgba(var(--text-color));
+     border: 2px double transparent;
+     background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+     background-origin: border-box;
+     color: white;
+     background-clip: padding-box, border-box;
+}

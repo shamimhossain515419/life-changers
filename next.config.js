@@ -16,7 +16,7 @@ module.exports = {
                },
                {
                     protocol: "https",
-                    hostname: "tecdn.b-cdn.net",
+                    hostname: "masrrat.org",
                },
                {
                     protocol: "https",

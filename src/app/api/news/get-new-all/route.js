@@ -9,9 +9,8 @@ export async function GET(req) {
   
 
      try {
-         
-              const news =  await News.find({})
-                  
+      const news =  await News.find({})
+        
           
           if (news) {
                return NextResponse.json({
