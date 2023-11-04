@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Container from '../Contianer/Container';
-import TitleBar from '../TitleBar/TitleBar';
-import { Questions } from '../utils/sliderData/Question';
+import Container from '../../Contianer/Container';
+import TitleBar from '../../TitleBar/TitleBar';
+import { Questions } from '../../utils/sliderData/Question';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
 const Question = () => {

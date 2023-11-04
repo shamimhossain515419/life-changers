@@ -2,9 +2,10 @@
 import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectFade, Autoplay } from "swiper/modules";
-import SingleBannerSlider from "./SingleBannerSlider";
-import mainSlider from "../utils/sliderData";
+
 import "swiper/css/bundle";
+import SingleBannerSlider from "./SingleBannerSlider";
+import mainSlider from "@/Components/utils/sliderData";
 const BannerSlider = () => {
   useEffect(() => {
     const banner = document.querySelector("#banner");

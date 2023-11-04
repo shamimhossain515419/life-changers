@@ -1,12 +1,14 @@
 import React from 'react';
 import './Business.css'
-import TitleBar from '../TitleBar/TitleBar';
+
 import Image from 'next/image';
 import business from '/public/image/business.webp'
 import checking from '/public/image/checking.webp'
 import savings from '/public/image/savings.webp'
-import Container from '../Contianer/Container';
+
 import { AiOutlineArrowRight } from 'react-icons/ai';
+import TitleBar from '@/Components/TitleBar/TitleBar';
+import Container from '@/Components/Contianer/Container';
 const Business = () => {
      return (
           <div className=' py-11 relative'>

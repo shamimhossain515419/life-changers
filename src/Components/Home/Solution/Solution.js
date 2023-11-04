@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
-import personalized from '../../../public/image/personalized.webp'
-import Container from '../Contianer/Container';
+import personalized from '../../../../public/image/personalized.webp'
+
 import Link from 'next/link';
+import Container from '@/Components/Contianer/Container';
 const Solution = () => {
      return (
           <div className=' bg-[#17234a]'>

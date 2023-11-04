@@ -1,12 +1,15 @@
 
 
 import Image from 'next/image';
-import image1 from '../../../public/image/img-1.jpg'
-import image2 from '../../../public/image/img-2.jpg'
-import shape from '../../../public/image/shape-1.png'
-import CommonTitle from "../CommonTitle/CommonTitle";
-import Container from '../Contianer/Container';
-import Link from 'next/link';
+import image1 from '../../../../public/image/img-1.jpg'
+import image2 from '../../../../public/image/img-2.jpg'
+import shape from '../../../../public/image/shape-1.png'
+
+
+import CommonTitle from '@/Components/CommonTitle/CommonTitle';
+import Container from '@/Components/Contianer/Container';
+
+
 const About = () => {
      return (
           <div>

@@ -1,12 +1,13 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { AiOutlineClose, AiOutlineMenuUnfold } from "react-icons/ai";
 
 
 
 import Image from "next/image";
 import NavLink from "../NavLink/NavLink";
+import { AuthContext } from "@/GlobaState";
 
 
 const NavLinks = [
@@ -38,13 +39,16 @@ const NavLinks = [
 ];
 
 const Navbar = () => {
-// const { user, logout } = useAuth();
-const user =null
-   const [open, setOpen] = useState(false);
+  // const { user, logout } = useAuth();
+  const { user,logout } = useContext(AuthContext)
+  const [open, setOpen] = useState(false);
+  console.log(user?.user);
   const handleLogOut = () => {
-    // logout()
-    //   .then(() => { })
-    //   .catch((error) => console.log(error));
+    logout()
+      .then((result) => {
+        console.log(result);
+       })
+      .catch((error) => console.log(error));
   };
   return (
     <div
@@ -53,7 +57,7 @@ const user =null
     >
       <nav className="flex justify-between items-center">
         <div className="">
-          <h1 className=" text-xl  md:text-4xl font-bold flex items-center">
+          <h1 className=" text-xl secondary  md:text-4xl font-bold flex items-center">
             <Link href="/">Life  Changers</Link>
           </h1>
         </div>
@@ -96,26 +100,13 @@ const user =null
         </div>
         {user ? (
           <>
-            <div className="dropdown dropdown-end">
-              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full">
-                  <Image width={100}  height={100} src={user?.photoURL} alt="image" />
-                </div>
-              </label>
-              <ul
-                tabIndex={0}
-                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-              >
-                <button onClick={handleLogOut}>
-                  <li className="text-black">
-                    <a>Logout</a>
-                  </li>
-                </button>
-              </ul>
+            <div className=" dropdown-end">
+                 <h1> {user?.email.slice(0,15)} </h1>
+              
             </div>
           </>
         ) : (
-          <Link href="/login" className=" text-white  primaryBg px-3 py-2">
+          <Link href="/register" className=" text-white  primaryBg px-3 py-2">
             <button>Open Account</button>
           </Link>
         )}

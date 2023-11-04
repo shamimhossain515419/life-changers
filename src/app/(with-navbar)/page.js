@@ -1,13 +1,22 @@
 
 'use client'
-import About from "@/Components/About/About";
-import BannerSlider from "@/Components/Banner/BannerSlider";
-import Business from "@/Components/Business/Business";
-import Question from "@/Components/Question/Question";
-import Solution from "@/Components/Solution/Solution";
+
+import About from "@/Components/Home/About/About"
+import BannerSlider from "@/Components/Home/Banner/BannerSlider"
+import Business from "@/Components/Home/Business/Business"
+import Get_start from "@/Components/Home/Get-start/Get_start"
+import Question from "@/Components/Home/Question/Question"
+import Solution from "@/Components/Home/Solution/Solution"
+import Input from "@/Components/Input/Input"
+import Footer from "@/Components/Share/Footer/Footer"
+import { useState } from "react"
+
 
 export default function Home() {
 
+
+  const [fromData, setFromData] = useState("");
+  console.log(fromData);
   return (
     <div>
 
@@ -24,7 +33,14 @@ export default function Home() {
         <Question></Question>
       </div>
 
+      <div>
+        <Get_start></Get_start>
+      </div>
 
+
+      <div className=" my-8">
+        <Footer></Footer>
+      </div>
 
     </div>
   )

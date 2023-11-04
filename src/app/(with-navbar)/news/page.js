@@ -11,9 +11,9 @@ const News = async() => {
      console.log(news);
  
     return (
-          <div>
+          <div className=' mt-[110px]'>
                <div>
-                    <div className="  bg-[#F4F4F4] py-4 px-2  ">
+                    <div className="  bgColor py-4 px-2  ">
                          <div>
                               <Container>
                                    <div className=" flex    items-center gap-1  text-xl  font-semibold">
@@ -43,9 +43,9 @@ const News = async() => {
 
                                    <div>
                                         <div>
-                                             <h1 className=" thirdBg text-xl  md:text-2xl font-medium  text-[#000000b0]  px-4 py-3 rounded-sm  uppercase   "> Search</h1>
+                                             <h1 className=" bgColor text-xl  md:text-2xl font-medium  text-[#000000b0]  px-4 py-3 rounded-sm  uppercase   "> Search</h1>
 
-                                             <div className=" thirdBg text-xl flex justify-between items-center gap-1 mt-[1px]  md:text-2xl font-medium  text-[#000000b0]  px-4 py-3 rounded-sm  uppercase   ">
+                                             <div className=" bgColor text-xl flex justify-between items-center gap-1 mt-[1px]  md:text-2xl font-medium  text-[#000000b0]  px-4 py-3 rounded-sm  uppercase   ">
                                                   <input className=" w-full text-base font-normal p-2  capitalize
                                            text-[#4a4646b0]" type="text" placeholder=" Search..." name="" id="" />
                                                   <FiSearch className=" mx-3 cursor-pointer " size={20}></FiSearch>
@@ -54,9 +54,9 @@ const News = async() => {
                                    </div>
 
                                    <div className=" mt-6">
-                                        <h1 className=" thirdBg text-xl  md:text-2xl font-medium  text-[#000000b0]  px-4 py-3 rounded-sm  uppercase   "> latest news</h1>
+                                        <h1 className=" bgColor text-xl  md:text-2xl font-medium  text-[#000000b0]  px-4 py-3 rounded-sm  uppercase   "> latest news</h1>
                                    </div>
-                                   <div className=" thirdBg text-[#000000b0]  p-2  ">
+                                   <div className=" bgColor text-[#000000b0]  p-2  ">
                                         {
                                              news?.map(item => <div className=" p-3 " key={item?._id}>
                                                   <Link className="  text-lg font-normal    hover:text-[#27895C]"  href={`/news/${item?._id}`}> {item?.name} </Link>

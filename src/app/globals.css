@@ -34,6 +34,10 @@ body {
      color: #0A1023;
 }
 
+.bgColor {
+     background-color: #F5FAFF;
+}
+
 .shadow {
      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

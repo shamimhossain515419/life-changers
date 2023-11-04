@@ -4,10 +4,12 @@ import React from 'react';
 const layout = ({ children }) => {
      return (
           <div>
-          <Navbar></Navbar>
+               <Navbar></Navbar>
 
-               {children}
-               
+               <div >
+                    {children}
+               </div>
+
           </div>
      );
 };
