@@ -24,7 +24,7 @@ const Question = () => {
                               <div className=' w-full'>
 
                                    {
-                                        Questions?.map(item => <div className='   my-4 shadow w-full  p p-4 rounded'>
+                                        Questions?.map(item => <div key={item?._id} className='   my-4 shadow w-full  p p-4 rounded'>
                                              <div onClick={() => setOpen(item._id)} className='flex cursor-pointer   justify-between items-center gap-1 w-full'>
                                                   <h1 className=' textColor text-lg md:text-xl font-bold'> {item?.title} </h1>
 

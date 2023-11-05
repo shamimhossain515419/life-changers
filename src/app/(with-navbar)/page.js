@@ -7,7 +7,6 @@ import Business from "@/Components/Home/Business/Business"
 import Get_start from "@/Components/Home/Get-start/Get_start"
 import Question from "@/Components/Home/Question/Question"
 import Solution from "@/Components/Home/Solution/Solution"
-import Input from "@/Components/Input/Input"
 import Footer from "@/Components/Share/Footer/Footer"
 import { useState } from "react"
 

@@ -5,9 +5,12 @@ import { AiOutlineClose, AiOutlineMenuUnfold } from "react-icons/ai";
 
 
 
-import Image from "next/image";
+
 import NavLink from "../NavLink/NavLink";
 import { AuthContext } from "@/GlobaState";
+import Modal from "../Home/Modal/Modal";
+
+
 
 
 const NavLinks = [
@@ -40,14 +43,14 @@ const NavLinks = [
 
 const Navbar = () => {
   // const { user, logout } = useAuth();
-  const { user,logout } = useContext(AuthContext)
+  const { user, logout, openModal, setOpenModal } = useContext(AuthContext)
   const [open, setOpen] = useState(false);
   console.log(user?.user);
   const handleLogOut = () => {
     logout()
       .then((result) => {
         console.log(result);
-       })
+      })
       .catch((error) => console.log(error));
   };
   return (
@@ -98,19 +101,29 @@ const Navbar = () => {
             ></AiOutlineMenuUnfold>
           )}
         </div>
-        {user ? (
-          <>
-            <div className=" dropdown-end">
-                 <h1> {user?.email.slice(0,15)} </h1>
-              
-            </div>
-          </>
-        ) : (
-          <Link href="/register" className=" text-white  primaryBg px-3 py-2">
-            <button>Open Account</button>
-          </Link>
-        )}
+        <div className="  hidden md:block">
+          {user ? (
+            <>
+              <div onClick={() => setOpenModal(!openModal)} className=" px-3 py-[7px] rounded-2xl border border-[#1a4bde] cursor-pointer  hover:bg-[#1a4bde] hover:text-white   dropdown-end">
+                <h1 className=" text-xl  font-medium "> {user?.email.slice(0, 10)} </h1>
+
+              </div>
+            </>
+          ) : (
+            <Link href="/register" className=" text-white  primaryBg px-3 py-2">
+              <button>Open Account</button>
+            </Link>
+          )}
+        </div>
       </nav>
+
+      <div>
+        {
+          openModal ? <>  <Modal openModal={openModal} setOpenModal={setOpenModal} handleLogOut={handleLogOut} user={user}></Modal></> : <></>
+        }
+      </div>
+
+
     </div>
   );
 };

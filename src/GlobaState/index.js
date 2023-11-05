@@ -18,6 +18,7 @@ const auth = getAuth(app);
 export const AuthContext = createContext(null)
 const AuthProvider = ({ children }) => {
      const [user, setUser] = useState(null);
+     const [openModal, setOpenModal] = useState(false);
      const [loading, setLoading] = useState(true);
      const googleProvider = new GoogleAuthProvider();
      const createUser = async (email, password) => {
@@ -71,7 +72,8 @@ const AuthProvider = ({ children }) => {
           profileUpdate,
           googleLogin,
           logout,
-          name,
+          openModal, setOpenModal
+          
      };
 
      return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
